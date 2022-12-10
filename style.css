@@ -23,11 +23,15 @@ body {
     flex-direction: column;
     justify-content: center;
     padding-left: 25px;
-    gap: 15px;
+}
+
+#messages .msg:last-child {
+    padding-top: 25px;
 }
 
 .msg {
     font-size: 25px;
+    font-weight: 500;
 }
 
 .msg > span {
