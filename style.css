@@ -3,11 +3,16 @@
     src: url(./California.ttf);
 }
 
+:root {
+    --main-color: #d17d47;
+}
+
 body {
     margin: 0;
     height: 700px;
     display: flex;
-    flex-direction: row;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.07);
 }
 
 #content {
@@ -18,7 +23,6 @@ body {
 
 #messages {
     height: 30%;
-    background-color: rgba(0, 0, 0, 0.07);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,20 +35,93 @@ body {
 
 .msg {
     font-size: 25px;
-    font-weight: 500;
 }
 
 .msg > span {
     font-style: italic;
 }
 
-#form {
-    height: 45%;
+form {
+    height: 70%;
 }
 
-#button {
-    height: 25%;
-    background-color: rgba(0, 0, 0, 0.07);
+form > .msg {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    background-color: white;
+}
+
+fieldset {
+    display: flex;
+    gap: 8em;
+    border: none;
+    padding-left: 25px;
+}
+
+fieldset:nth-child(4) {
+    padding-bottom: 25px;
+}
+
+.input {
+    height: 12%;
+}
+
+.input > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+input {
+    height: 1.75em;
+    width: 15em;
+    font-size: 14px;
+    border-radius: 0.25em;
+    border-width: thin;
+    border-color: lightslategray;
+}
+
+#submit {
+    padding-top: 20px;
+}
+
+button {
+    background-color: var(--main-color);
+    border-width: 0;
+    box-shadow: 2px 2px 2px gray;
+    color: white;
+    width: 20%;
+    height: 3em;
+    border-radius: 0.5em;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button:focus {
+    box-shadow: none;
+}
+
+fieldset > .msg {
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.link:hover {
+    opacity: 0.7;
+}
+
+form > .input {
+    background-color: white;
 }
 
 #header {
@@ -62,7 +139,7 @@ body {
     justify-content: center;
     align-items: center;
     font-family: cali-style, sans-serif;
-    font-size: 70px;
+    font-size: 5em;
     color: bisque;
     background-color: rgba(0, 0, 0, 0.6);
 }
